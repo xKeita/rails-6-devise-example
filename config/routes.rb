@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'friends', to: 'friends#index'
+
+  resources :friends
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations',
