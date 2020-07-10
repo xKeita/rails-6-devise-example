@@ -15,7 +15,14 @@
 
   <style>
   body { 
-    background: url(/assets/bg.jpg) no-repeat center center fixed; 
+    background-image: url("<%= asset_path('bg.jpg') %>") no-repeat center center fixed;
+
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
   }
 
 .content-container{
@@ -29,7 +36,12 @@
 .navbar{
   margin-left: 12.5vw;
   margin-right: 12.5vw;
-  z-index: 1000;
+  font-family: "Helvetica Neue",
+  Arial,
+  "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif;
 }
 
 @media screen and (max-width: 600px) {
